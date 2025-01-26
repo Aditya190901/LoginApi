@@ -15,7 +15,7 @@ public class UserService {
     private UserRepository userRepository;
 
     @Autowired
-    private PasswordEncoder passwordEncoder; // Use the interface type
+    private PasswordEncoder passwordEncoder; 
 
     public User registerUser(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
